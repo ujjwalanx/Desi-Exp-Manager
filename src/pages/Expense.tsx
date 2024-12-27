@@ -155,17 +155,17 @@ const ExpensePage = () => {
                 </option>
               ))}
             </select>
-            <select
-              value={selectedYear}
-              onChange={(e) => setSelectedYear(parseInt(e.target.value))}
-              className="p-2 border rounded"
-            >
-              {Array.from({ length: 5 }, (_, i) => (
-                <option key={i} value={new Date().getFullYear() - i}>
-                  {new Date().getFullYear() - i}
-                </option>
-              ))}
-            </select>
+           <select
+  value={selectedYear}
+  onChange={(e) => setSelectedYear(parseInt(e.target.value))}
+  className="p-2 border rounded"
+>
+  {Array.from({ length: 11 }, (_, i) => (
+    <option key={i} value={new Date().getFullYear() - i + 6}>
+      {new Date().getFullYear() - i + 6}
+    </option>
+  ))}
+</select>
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
